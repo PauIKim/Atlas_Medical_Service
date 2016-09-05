@@ -50,3 +50,8 @@ Project requirements
      side to store important schemas and to render appropriate information
      such as the doctor information or new appointments onto the client side.
 
+Git Repository URL
+	https://github.com/traviskampa/swe432_doctor_appointment.git
+
+The URL for your Github pages website.
+	https://traviskampa.github.io/swe432_doctor_appointment/
