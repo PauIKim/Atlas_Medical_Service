@@ -1,4 +1,7 @@
 # swe432_doctor_appointment
+
+Collaborators: Kien Nguyen, Pyoung Kang Kim
+
 Project Description
 
      This project will create a web application that allow clients to make an
