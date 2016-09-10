@@ -20,23 +20,23 @@ Create at least 3 different HTML pages: 	****INCOMPLETE**** 1 Complete: i.e. ind
 
 Use of CSS features: 	****INCOMPLETE****
 
-External CSS file: 	****INCOMPLETE****
+External CSS file: 	COMPLETE
 
-At least 4 selector types: 	****INCOMPLETE****
+At least 4 selector types: 	COMPLETE
 
-At least 3 pseudo classes: 	****INCOMPLETE****
+At least 3 pseudo classes: 	****INCOMPLETE**** 1 Complete: i.e Line 44, resources/stylesheet.css
 
-Padding, border: 	****INCOMPLETE****
+Padding, border: 	****INCOMPLETE**** i.e. Line 40(padding), resources/stylesheet.css
 
 Z-index & opacity: 	****INCOMPLETE****
 
-At least 3 different positioning schemes: 	****INCOMPLETE****
+At least 3 different positioning schemes: 	****INCOMPLETE**** 1 Complete: i.e Line 85, resources/stylesheet.css
 
 Transform: 	****INCOMPLETE****
 
 Transition: 	****INCOMPLETE****
 
-Support responsive layout: 	****INCOMPLETE****
+Support responsive layout: 	****INCOMPLETE****  scaled correctly for index.html. not others
 
 We will test your layout at a mobile resolution of 412 x 732. Your pages should be readable and usable at this resolution. In particular, your page should only scroll vertically, not horizontally.: 	****INCOMPLETE****
 
