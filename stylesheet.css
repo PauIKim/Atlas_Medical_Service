@@ -1,0 +1,140 @@
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.main {
+  width: 75%;
+  height:  75%;
+  margin: auto;
+}
+
+.nav-bar {
+}
+
+.nav-bar-img {
+   display: inline-block;
+   width: 150px;
+   height: 150px;
+}
+
+
+.nav-bar-logo {
+  float: left;
+}
+
+.nav-bar-ul {
+  list-style-type: none;
+  background-color: #d9d9d9;
+  font-size: 1.5em;
+}
+
+li {
+  display: inline-block;
+}
+
+li a {
+  text-decoration: none;
+  display:  block;
+  font-size: .75em;
+  color: black;
+  padding: 15px 15px;
+  text-align: center;
+}
+
+li a:hover {
+  background-color: #808080;
+}
+
+form div{
+  
+  margin-top: 25px;
+}
+
+#search-main-page {
+  float: right;
+  width:  250px;
+  height: 45px;
+}
+
+#search-main-image {
+  float: right;
+  width: 50px;
+  height: 45px;
+}
+
+.header {
+  height: 50px;
+  width: 100%;
+  background-color: #F5F5DC;
+  text-align: right;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#login-button {
+  margin-top: 10px;
+}
+
+#register-button {
+  margin-top: 15px;
+  margin-right: 22px;
+}
+
+#main-banner {
+  position: relative;
+  clear: both;
+}
+
+#main-banner-img{
+  width: 100%;
+  border: 2px solid DarkGray;
+}
+
+.main-page-stub-table {
+  width: 100%;
+}
+
+.box-stub {
+  width: 33.3333333%;
+  text-align: left;
+}
+
+.box-stub-h3 {
+  border-top: 4px solid #9fd175; 
+  color: #252e42;    
+}
+
+.stub-body {
+ 
+}
+
+td {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
