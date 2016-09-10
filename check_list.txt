@@ -1,0 +1,48 @@
+Requirements:
+
+Use of HTML elements: 	****INCOMPLETE****
+
+<table>, <form>, <img>, <link>: 	COMPLETE e.g. Line: 5, index.html
+
+<input>: 	***INCOMPLETE****
+
+At least 3 different types: 	****INCOMPLETE**** 1 Complete: i.e. Line: 20, index.html
+
+Use label: 	****INCOMPLETE****
+
+Use placeholder text: 	COMPLETE i.e. Line: 22, index.html
+
+Use pattern for regex validation: 	****INCOMPLETE****
+
+At least 3 different semantic layout elements: 	COMPLETE: i.e. Line 18(form), Line 38(table), and Line 131(footer) all in index.html
+
+Create at least 3 different HTML pages: 	****INCOMPLETE**** 1 Complete: i.e. index.html
+
+Use of CSS features: 	****INCOMPLETE****
+
+External CSS file: 	****INCOMPLETE****
+
+At least 4 selector types: 	****INCOMPLETE****
+
+At least 3 pseudo classes: 	****INCOMPLETE****
+
+Padding, border: 	****INCOMPLETE****
+
+Z-index & opacity: 	****INCOMPLETE****
+
+At least 3 different positioning schemes: 	****INCOMPLETE****
+
+Transform: 	****INCOMPLETE****
+
+Transition: 	****INCOMPLETE****
+
+Support responsive layout: 	****INCOMPLETE****
+
+We will test your layout at a mobile resolution of 412 x 732. Your pages should be readable and usable at this resolution. In particular, your page should only scroll vertically, not horizontally.: 	****INCOMPLETE****
+
+When an appropriate specialized input type exists for the type of data being entered, it should be used.: 	****INCOMPLETE****
+
+Must follow all best practices and style rules for HTML & CSS given in lecture: 	****INCOMPLETE****
+
+
+Each HTML file should have a comment describing its purpose and use in the application.: 	****INCOMPLETE****
