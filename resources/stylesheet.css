@@ -105,22 +105,11 @@ button:hover {
   width: 100%;
 }
 
-.box-stub {
-  width: 33.3333333%;
-  text-align: left;
-}
-
 .box-stub-h3 {
   border-top: 4px solid #9fd175; 
   color: #252e42;    
 }
 
-.stub-body {
- 
-}
-
-td {
-}
 
 #appointment-form {
   clear: both;	
