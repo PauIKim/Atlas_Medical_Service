@@ -28,6 +28,15 @@ body {
   font-size: 1.5em;
 }
 
+a{
+  color: blue;
+}
+
+a:visited{
+  color: purple;
+}
+
+
 li {
   display: inline-block;
 }
@@ -86,11 +95,82 @@ button:hover {
   clear: both;
 }
 
+
 #main-banner-img{
+  width: 100%;
+  border: 2px solid DarkGray;
+}
+
+.main-page-stub-table {
   width: 100%;
 }
 
+.box-stub {
+  width: 33.3333333%;
+  text-align: left;
+}
+
+.box-stub-h3 {
+  border-top: 4px solid #9fd175; 
+  color: #252e42;    
+}
+
+.stub-body {
+ 
+}
+
+td {
+}
+
+#appointment-form {
+  clear: both;	
+}
+
+#doctor-search-box{
+  position: fixed;
+  right: 15%;
+  top: 30%;
+  height: 300px;
+  width: 300px;
+  border: 2px solid black;
+}
+
+#special-doctor{
+  text-align: center;
+}
+
+#diagnosis{
+  width:  350px;
+  height:  150px;
+}
+
+.disease {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    margin-right: -10%;
+}
+
+.disease-type {
+    position: absolute;
+    top: 43%;
+    left: 10%;
+    margin-right: -10%;
+}
 
 
+.specialists-title {
+  position: absolute;
+  top:  46%;
+  left: 7%;
+  margin-right: -7%;
+  text-decoration: underline;
+}
 
+.specialists {
+  position: absolute;
+  top:  59%;
+  left: 7%;
+  margin-right: -7%;
+}
 

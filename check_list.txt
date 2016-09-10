@@ -1,48 +1,34 @@
 Requirements:
 
-Use of HTML elements: 	****INCOMPLETE****
+Create at least 3 different HTML pages: 	****INCOMPLETE**** 1 Complete:
+i.e. index.html appointments.html. Need one more
 
-<table>, <form>, <img>, <link>: 	COMPLETE e.g. Line: 5, index.html
-
-<input>: 	***INCOMPLETE****
-
-At least 3 different types: 	****INCOMPLETE**** 1 Complete: i.e. Line: 20, index.html
-
-Use label: 	****INCOMPLETE****
-
-Use placeholder text: 	COMPLETE i.e. Line: 22, index.html
-
-Use pattern for regex validation: 	****INCOMPLETE****
-
-At least 3 different semantic layout elements: 	COMPLETE: i.e. Line 18(form), Line 38(table), and Line 131(footer) all in index.html
-
-Create at least 3 different HTML pages: 	****INCOMPLETE**** 1 Complete: i.e. index.html
-
-Use of CSS features: 	****INCOMPLETE****
-
-External CSS file: 	COMPLETE
-
-At least 4 selector types: 	COMPLETE
-
-At least 3 pseudo classes: 	****INCOMPLETE**** 1 Complete: i.e Line 44, resources/stylesheet.css
-
-Padding, border: 	****INCOMPLETE**** i.e. Line 40(padding), resources/stylesheet.css
-
-Z-index & opacity: 	****INCOMPLETE****
-
-At least 3 different positioning schemes: 	****INCOMPLETE**** 1 Complete: i.e Line 85, resources/stylesheet.css
-
-Transform: 	****INCOMPLETE****
-
-Transition: 	****INCOMPLETE****
-
-Support responsive layout: 	****INCOMPLETE****  scaled correctly for index.html. not others
-
-We will test your layout at a mobile resolution of 412 x 732. Your pages should be readable and usable at this resolution. In particular, your page should only scroll vertically, not horizontally.: 	****INCOMPLETE****
-
-When an appropriate specialized input type exists for the type of data being entered, it should be used.: 	****INCOMPLETE****
-
-Must follow all best practices and style rules for HTML & CSS given in lecture: 	****INCOMPLETE****
+At least 3 pseudo classes: 	****INCOMPLETE**** 1 Complete: i.e Line 44,
+resources/stylesheet.css Todo, just add two more pseudo class in some
+component of the page
 
 
-Each HTML file should have a comment describing its purpose and use in the application.: 	****INCOMPLETE****
+Z-index & opacity: 	****INCOMPLETE**** Will use a Modal for Login/
+Register. To do 
+
+Transform: 	****INCOMPLETE**** will use a Modal
+
+Transition: 	****INCOMPLETE**** will use a Modal
+
+Support responsive layout: 	****INCOMPLETE****  Scales correctly for
+index.html and appointments.html, but need another html page.
+
+We will test your layout at a mobile resolution of 412 x 732. Your pages should be readable and usable at this resolution. In particular, your page should only scroll vertically, not horizontally.:
+
+When an appropriate specialized input type exists for the type of data being
+entered, it should be used.: 	****INCOMPLETE**** correct semantics from
+index.html and appointments.html for the most part, will recheck. Need another
+html page
+
+Must follow all best practices and style rules for HTML & CSS given in
+lecture: 	****INCOMPLETE**** will need to refactor and go over BEST
+practices and refactor some more
+
+
+Each HTML file should have a comment describing its purpose and use in the
+application.: 	****INCOMPLETE**** need another html page
