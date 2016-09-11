@@ -38,10 +38,14 @@
 			First Name: <br /> <input type="text" pattern="[A-Za-z]{1}"
 				name="firstname" value=""><br /> Last Name: <br /> <input
 				type="text" pattern="[A-Za-z]{1}" name="lastname" value=""><br />
-			<br /> Gender <br />
-			<br /> <label for="male"></label> <input type="radio" name="male"
-				value="" />Male<br /> <label for="female"></label> <input
-				type="radio" name="female" value="" />Female<br />
+			<br />
+			<!-- only one option can be selected at a time -->
+			<form action ="" >Gender </br>
+				<input type = "radio" name = "gender" id="male" value="1">  male</br>
+				<input type = "radio" name = "gender" id="female" value="2"> female</br>
+				<input type = "radio" name = "gender" id="other" value="3"> female</br>
+			</form>
+
 			<br /> Address: &nbsp; <input type="text"
 				placeholder="e.g. 12345 Ox Road" /><br />
 			<br /> City: &nbsp; <input type="text" placeholder="e.g. Fairfax" />
