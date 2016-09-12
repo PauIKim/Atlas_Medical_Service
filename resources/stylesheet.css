@@ -62,6 +62,14 @@ form div{
   float: right;
   width:  250px;
   height: 45px;
+  -webkit-transition: width 1s;
+  -moz-transition:  width 1s;
+  -o-transition: width 1s;
+  transition: width 1s;
+}
+
+#search-main-page:hover {
+  width: 300px;
 }
 
 #search-main-image {
@@ -122,7 +130,20 @@ button:hover {
   height: 300px;
   width: 300px;
   border: 2px solid black;
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  -moz-transition:  -moz-transform 0.2s ease-in;
+  -o-transition:  -o-transform 0.2s ease-in;
 }
+
+#doctor-search-box:hover {
+    -moz-transform: scale(1.05);
+    -ms-transform:  scale(1.05);
+    -o-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    background-color:#D3D3D3;
+}
+
 
 #special-doctor{
   text-align: center;
@@ -163,3 +184,6 @@ button:hover {
   margin-right: -7%;
 }
 
+input[type=checkbox]:checked + label{  
+    font-style: italic;
+}

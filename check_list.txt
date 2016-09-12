@@ -3,21 +3,12 @@ Requirements:
 Create at least 3 different HTML pages: 	****INCOMPLETE**** 1 Complete:
 i.e. index.html appointments.html. Need one more
 
-At least 3 pseudo classes: 	****INCOMPLETE**** 1 Complete: i.e Line 44,
-resources/stylesheet.css Todo, just add two more pseudo class in some
-component of the page
-
-
 Z-index & opacity: 	****INCOMPLETE**** Will use a Modal for Login/
 Register. To do 
 
-Transform: 	****INCOMPLETE**** will use a Modal
-
-Transition: 	****INCOMPLETE**** will use a Modal
 
 Support responsive layout: 	****INCOMPLETE****  Scales correctly for
 index.html and appointments.html, but need another html page.
-
 We will test your layout at a mobile resolution of 412 x 732. Your pages should be readable and usable at this resolution. In particular, your page should only scroll vertically, not horizontally.:
 
 When an appropriate specialized input type exists for the type of data being
