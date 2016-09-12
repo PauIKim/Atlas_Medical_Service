@@ -8,9 +8,31 @@
 </head>
 <body>
 	<div class="main">
+		<!-- Code Snippet from http://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2 -->
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+
+			<!-- Modal content -->
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="close">×</span>
+					<h2>Login</h2>
+				</div>
+				<div class="modal-body">
+					username: <input type="text" /> <br /> <br /> password: <input
+						type="password" />
+				</div>
+				<div class="modal-footer">
+					<button type="submit">Login</button>
+				</div>
+			</div>
+		</div>
+		<!-- End of Snippet from http://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal12 -->
 		<div class="header">
 			<button id="login-button">Login</button>
-			<button id="register-button">Register</button>
+			<button id="register-button">
+				<a href="/register" style="text-decoration: none; color: black;">Register</a>
+			</button>
 		</div>
 		<a href="" class="nav-bar-logo"><img class="nav-bar-img"
 			src="https://image.freepik.com/free-vector/heart-shaped-hospital-logo-template_1057-391.jpg"
@@ -40,15 +62,15 @@
 				type="text" pattern="[A-Za-z]{1}" name="lastname" value=""><br />
 			<br />
 			<!-- only one option can be selected at a time -->
-			<form action ="" >Gender </br>
-				<input type = "radio" name = "gender" id="male" value="1">  male</br>
-				<input type = "radio" name = "gender" id="female" value="2"> female</br>
+			<form action="">
+				Gender </br> <input type="radio" name="gender" id="male" value="1">
+				male</br> <input type="radio" name="gender" id="female" value="2">
+				female</br>
 			</form>
 
 			<br /> Address: &nbsp; <input type="text"
-				placeholder="e.g. 12345 Ox Road" /><br />
-			<br /> City: &nbsp; <input type="text" placeholder="e.g. Fairfax" />
-			&nbsp; State &nbsp; <select>
+				placeholder="e.g. 12345 Ox Road" /><br /> <br /> City: &nbsp; <input
+				type="text" placeholder="e.g. Fairfax" /> &nbsp; State &nbsp; <select>
 				<option value="AL">AL</option>
 				<option value="AK">AK</option>
 				<option value="AZ">AZ</option>
@@ -100,8 +122,7 @@
 				<option value="WV">WV</option>
 				<option value="WI">WI</option>
 				<option value="WY">WY</option>
-			</select> <br />
-			<br /> Cell Phone: &nbsp; <input type="text"
+			</select> <br /> <br /> Cell Phone: &nbsp; <input type="text"
 				pattern="[0-9]{3}-{0-9}{3}-{0-9}{4}" placeholder="(888) 888-8888" />
 			<br /> <br /> Home Phone: &nbsp; <input type="text"
 				pattern="[0-9]{3}-{0-9}{3}-{0-9}{4}" placeholder="(888) 888-8888" />
@@ -273,7 +294,7 @@
 				<option value="1900">1900</option>
 			</select> <br />
 			<h3>Appointment Time</h3>
-            		<input type="datetime-local"/>
+			<input type="datetime-local" />
 			<h3>Patient Background Information</h3>
 			<p>Are you insured?</p>
 			<label for="healthinsurance"></label> <input type="radio"
@@ -281,19 +302,16 @@
 				for="healthinsurance"></label> <input type="radio"
 				name="healthinsurance" value="" />I do not have insurance<br /> <label
 				for="healthinsurance"></label> <input type="radio"
-				name="healthinsurance" value="" />I do not know<br />
-			<br /> Briefly describe below, the diagnosis. e.g any symptons,
-			check-ups etc.. <br />
+				name="healthinsurance" value="" />I do not know<br /> <br />
+			Briefly describe below, the diagnosis. e.g any symptons, check-ups
+			etc.. <br />
 			<textarea id="diagnosis"></textarea>
 			<br /> <br /> <strong style="color: violet">check below to
 				accept</strong> <br /> <input type="checkbox" name="email-check" value="">
-			<label for="email-check">Email Reminders</label><br/>
-			<input type="checkbox" name="call-check" value=""><label>
-			Call Any Business Hours</label>
-						<br />
-			<br /> <input type="submit" value="Submit">
-			<input type="reset"> <br />
-			<br />
+			<label for="email-check">Email Reminders</label><br /> <input
+				type="checkbox" name="call-check" value=""><label>
+				Call Any Business Hours</label> <br /> <br /> <input type="submit"
+				value="Submit"> <input type="reset"> <br /> <br />
 			<br />
 		</div>
 
@@ -323,22 +341,36 @@
 		<div class="footer">© 2016-2016 Doctor For You. Medicine and
 			Health Research Foundation. All Rights reserved.</div>
 	</div>
+	<!-- Snippet from http://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2 -->
+	<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("login-button");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+	<!-- End of Snippet from http://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal12 -->
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
