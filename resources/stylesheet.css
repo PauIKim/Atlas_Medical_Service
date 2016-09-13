@@ -434,3 +434,10 @@ to {
         text-transform: uppercase;
     }
 }
+
+footer {
+	padding-top: 28px;
+	border-top: 1px solid #d2d2d2;
+	font-size: 12px;
+	margin-bottom: 20px;
+}
