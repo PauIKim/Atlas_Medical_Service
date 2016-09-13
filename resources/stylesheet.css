@@ -355,3 +355,82 @@ to {
 	border-bottom: 2px solid rgb(76, 67, 65);
 	margin-bottom: 1.5em;
 } 
+
+.profile-image img {
+    -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* IE 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+}
+
+.profile-image:hover img {
+    -webkit-transform:scale(3); /* Safari and Chrome */
+    -moz-transform:scale(3); /* Firefox */
+    -ms-transform:scale(3); /* IE 9 */
+    -o-transform:scale(3); /* Opera */
+    transform:scale(3);
+}
+
+.working-hour,.service-table {
+    margin-left:auto;
+    margin-right:auto;
+    width: 100%;
+}
+
+.working-hour th{
+    font-weight:90;
+    color: #ffffff;
+    background: #ea6153;
+}
+
+.working-hour tr, .service-table tr{
+    display: table-row;
+    background: #f6f6f6;
+}
+
+.working-hour th {
+    font-weight: 90;
+    color: #ffffff;
+    background: #ea6153
+}
+
+.service-table th {
+    font-weight: 90;
+    color: #ffffff;
+    background: cadetblue;
+}
+
+@media only screen and (min-width: 769px) {
+    .banner {
+        clear:both;
+        height: 350px;
+        padding-left: 3.9%;
+        overflow: hidden;
+        background: url(http://www.aimhc.com/images/banner3a.jpg) no-repeat;
+        margin-bottom: 4em;
+        position: relative;
+        border: 2px solid DarkGray;
+    }
+
+    .banner p {
+        margin-top: -10px;
+        width: 21%;
+        padding: 3% 1% 0;
+        height: 350px;
+        font-size: 1em;
+        color: white;
+        background: rgba(123, 121, 143, .5);  /* opacity is 50% */
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    /* style the h1 inside banner to put at bottom and all UpperCase */
+    .banner h1 {
+        font-size: 1.8em;
+        color:#ea6153;
+        padding-top: 290px;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+    }
+}
