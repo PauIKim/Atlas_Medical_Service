@@ -273,3 +273,85 @@ to {
 }
 
 /* End of Snippet from http://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal12 */
+
+
+#profile-form {
+	clear: both;
+}
+
+#profile-form h2 {
+	color: #3a3a3a;
+	margin-top: 0.7em;
+	margin-bottom: 0.65em;
+	font-weight: 600;
+
+	-webkit-margin-before: 0.83em;
+	-webkit-margin-after: 0.83em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
+
+#profile-form .profile-right {
+	background: #f3f3f1;
+	margin-top: 6%;
+	margin-left: 10px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+}
+
+
+@media only screen and (min-width:768px) {
+	#profile-form .profile-container div {
+		display: inline-block;
+		float: left;
+	}
+
+	#profile-form .profile-right {
+		float: right;
+		width: 22%;
+		padding-left: 2%;
+	}
+
+	#profile-form .profile-content {
+		display: block;
+		width: 70%;
+	}
+	#profile-form .profile-info {
+		display: inline-block;
+	}
+}
+
+#profile-form img {
+	width: 100px;
+	padding: 0;
+	margin: 5px;
+	display: inline-block;
+	float:left;
+}
+
+.clear-float {
+	clear:both;
+}
+
+@media only screen and (min-width:480px) and (max-width:768px){
+	.profile-info {display:none;}
+}
+
+@media only screen and (max-width: 480px){
+	.profile-info {display:none;}
+}
+
+.footer {
+	background: rgb(173, 169, 130);
+	padding-top: 1.5em;
+	clear: both;
+	overflow: hidden;
+	height: 150px;
+}
+
+.profile-container h2 {
+	font: 1.8em Cardo, Georgia, serif;
+	border-bottom: 2px solid rgb(76, 67, 65);
+	margin-bottom: 1.5em;
+} 
