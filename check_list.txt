@@ -1,0 +1,21 @@
+Requirements:
+
+Create at least 3 different HTML pages: 	****INCOMPLETE**** 1 Complete:
+i.e. index.html appointments.html. Need one more
+
+Support responsive layout: 	****INCOMPLETE****  Scales correctly for
+index.html and appointments.html, but need another html page.
+We will test your layout at a mobile resolution of 412 x 732. Your pages should be readable and usable at this resolution. In particular, your page should only scroll vertically, not horizontally.:
+
+When an appropriate specialized input type exists for the type of data being
+entered, it should be used.: 	****INCOMPLETE**** correct semantics from
+index.html and appointments.html for the most part, will recheck. Need another
+html page
+
+Must follow all best practices and style rules for HTML & CSS given in
+lecture: 	****INCOMPLETE**** will need to refactor and go over BEST
+practices and refactor some more
+
+
+Each HTML file should have a comment describing its purpose and use in the
+application.: 	****INCOMPLETE**** need another html page

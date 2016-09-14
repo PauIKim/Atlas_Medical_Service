@@ -1,53 +1,192 @@
-<h3>Collaborators</h3>: Kien Nguyen, Pyoung Kang Kim
-<h3>Project Description </h3>
 
- <p>This project will create a web application that allow clients to make an
- appointment for a medical service with a group of doctors and for
- doctors to keep track of their daily schedule. </p>
- 
-<h3>Clients</h3>
- <p>[1] To make an appointment, a client will select a date and the type of
- health issue, then pick the name of the physician/doctor he/she wants.
- The program will diplay a list of services that the doctor/physician
- provides, along with the cost and the time available for the client's
- selected date.</p>
+<!-- This HTML file serves the purpose of the index page, the "main home page" -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link type="text/css" rel="stylesheet" href="resources/stylesheet.css">
+<title>LocalDoctors</title>
+</head>
+<body>
+	<div class="main">
+		<!-- Code Snippet from http://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2 -->
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
 
- <p>[2] The client picks the service he needs, then uses his/her phone or
- email to confirm his decision. The web program will send the
- confirmation to the client's email or through a text message.</p>
- 
- <p>[3] The client can search their appointments page to check their
- appointment. The web program will email or text the client a reminder
- when the appointment is a day away.</p>
+			<!-- Modal content -->
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="close">×</span>
+					<h2>Login</h2>
+				</div>
+				<div class="modal-body">
+					username: <input type="text" /> <br /> <br /> password: <input
+						type="password" />
+				</div>
+				<div class="modal-footer">
+					<button type="submit">Login</button>
+				</div>
+			</div>
+		</div>
+		<!-- End of Snippet from http://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal12 -->
+		<div class="header">
+			<button id="login-button">Login</button>
+			<button id="register-button">
+				<a href="/register" style="text-decoration: none; color: black;">Register</a>
+			</button>
+		</div>
+		<a href="" class="nav-bar-logo"><img class="nav-bar-img"
+			src="https://image.freepik.com/free-vector/heart-shaped-hospital-logo-template_1057-391.jpg"
+			alt="Doctor For You" /></a>
+		<div class="nav-bar">
+			<form>
+				<div>
+					<input type="image" id="search-main-image" title="Search"
+						src="http://cliparts.co/cliparts/Bia/E5z/BiaE5zkaT.png"> <input
+						type="text" id="search-main-page" placeholder="Search Near You">
+				</div>
+			</form>
+			<ul class="nav-bar-ul">
+				<li class="nav-bar-li"><a href="index.html">Home</a></li>
+				<li class="nav-bar-li"><a href="profile.html">Find Doctors</a></li>
+				<li class="nav-bar-li"><a href="appointments.html">Appointments</a></li>
+				<li class="nav-bar-li"><a href="">Account</a></li>
+				<!-- Will use boolean logic depending on login session if doctor is logged in 
+			<li class="nav-bar-li"><a href="/doctor-profile/:id">Clients</a></li> -->
+			</ul>
+		</div>
+		<div id="main-banner">
+			<img id="main-banner-img"
+				src="https://static.pexels.com/photos/34983/pexels-photo.jpg" width="809" height="337" alt="Main Banner" />
+		</div>
+		<table class="main-page-stub-table">
+			<tr class="main-page-box-stubs">
+				<th class="box-stub">
+					<h3 class="box-stub-h3">Products and Services</h3>
+				</th>
 
-<p>[4] The client can later log into their account and CANCEL or MOVE their
- appointment schedule.</p>
+				<th class="box-stub">
+					<h3 class="box-stub-h3">Nationwide, we reach out</h3>
+				</th>
+				<th class="box-stub">
+					<h3 class="box-stub-h3">Contact us</h3>
+				</th>
+			</tr>
+			<tr>
+				<td>
+					<ul>
+						<li class="stub-body">With more than 50,000 different
+							treatments and state of the art medical practices, we are sure to
+							give you the best health treatment possible.</li>
+						<br />
+						<br />
+						<li class="stub-body">Looking for a specific doctor?</li>
 
-<h3>Doctor/Physicians.</h3>
+						<a href="/doctors" title="search now">Find a doctor now</a>
+					</ul>
+				</td>
+				<td>
+					<ul>
+						<li class="stub-body">We reach out nationwide, to help those
+							in need. With more than 60 hospitals in every state in the
+							country, we are here for you.</li>
+						<br />
+						<br />
+						<li class="stub-body">Not sure if there is a hospital local
+							to you?</li>
 
- <p>[1] Doctors can log in to check their schedule. After logging in, the
- doctor can either VIEW their schedule on particular date, or CANCEL or
- request to MOVE a client's appointment. In case of moving, client will
- receive a notification and need to confirm with the new schedule so it
- can be effective.</p>
+						<br />
+						<br />
+						<a href="/appointments" title="search now">Search Nearby
+							Hospitals</a>
+					</ul>
+				</td>
+				<td>
+					<ul>
+						<li class="stub-body">Phone Number: 123-123-1234</li>
+						<li class="stub-body">Email: DoctorForYou@doctorforyou.com</li>
+						<li class="stub-body">Fax: 999-999-9999</li>
+						<li class="stub-body">12345 Ox Bunny Rd, Centreville, VA
+							20121</li>
+					</ul>
+				</td>
+			</tr>
+			<tr class="main-page-box-stubs">
+				<th class="box-stub">
+					<h3 class="box-stub-h3">Careers</h3>
+				</th>
+				<th class="box-stub">
+					<h3 class="box-stub-h3">Donations</h3>
+				</th>
+				<th class="box-stub">
+					<h3 class="box-stub-h3">You Can Help</h3>
+				</th>
+			</tr>
+			<tr>
+				<td>
+					<ul>
+						<li class="stub-body">Looking to work at the most prestigious
+							hospital, helping people in extraordinary ways?</li>
+						<li class="stub-body">See what positions we need you in.</li>
+						<br />
+						<br />
+						<a href="/careers" title="Apply">Careers with DoctorForYou</a>
+					</ul>
+				</td>
+				<td>
+					<ul>
+						<li class="stub-body">You can make a difference in the world
+							today.</li>
+						<li class="stub-body">See those in need and reach out to
+							them.</li>
+						<li class="stub-body">With more than 4 breakthroughs in
+							cancer research foundations in the company, you can be a part of
+							a bigger cause.</li>
+						<br />
+						<br />
+						<a href="/donations" title="Donate">We accept Donations in
+							Credit/Paypal</a>
+					</ul>
+				</td>
+				<td><iframe frameborder="0" height="340"
+						src="http://www.youtube.com/embed/cDDWvj_q-o8"
+						title="Hospital For You Donations" width="380"></iframe></td>
+			</tr>
+		</table>
+		<br /> <br />
+		<footer>© 2016-2016 DoctorForYou. Medicine and Health
+			Research Foundation. All Rights reserved.</footer>
+	</div>
+	<!-- Snippet from http://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2 -->
+	<script>
+// Get the modal
+var modal = document.getElementById('myModal');
 
-<p> [2] Doctors can also ADD/REMOVE/UPDATE any other schedule (that they
- received outside the program) manually.</p>
+// Get the button that opens the modal
+var btn = document.getElementById("login-button");
 
-<p> [3] Doctors can also turn on/off their reminder function.</p>
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
 
-<h3>Project requirements</h3>
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+    modal.style.display = "block";
+}
 
- <p>This project will use D3js to add some visual effects on presenting a
- calendar and list of schedule for clients and doctors. It will also use
- either a Texting API such as "Textingly", or an email Validation API
- such as "Email Hippo Email Validation" to verify/remind the client for
- their appointment. The webapp also will use a database on the server
- side to store important schemas and to render appropriate information
- such as the doctor information or new appointments onto the client side.</p>
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
 
- <p>Git Repository URL</p>
- <p>https://github.com/traviskampa/swe432_doctor_appointment.git</p>
- </br>
- <p>The URL for your Github pages website.</p>
- <p>https://traviskampa.github.io/swe432_doctor_appointment/</p>
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+	<!-- End of Snippet from http://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal12 -->
+
+</body>
+</html>
