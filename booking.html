@@ -34,7 +34,7 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                        <li><a id="login" href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <li><a href="#" id="login" launch-view="login-view"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                     </ul>
                 </div>
 
@@ -48,7 +48,7 @@
 
                 <div class=" text-center" class="container">
                     <button type="button" class="btn btn-primary active">Services</button>
-                    <button type="button" class="btn btn-primary disabled">Date Time</button>
+                    <button id="date-time-btn" type="button" class="btn btn-primary disabled">Date Time</button>
                     <button type="button" class="btn btn-primary disabled">Confirmation</button>
                 </div>
                 <div id="booking-service" class=" show" class="container">
@@ -70,19 +70,19 @@
                                         <td>1</td>
                                         <td>Normal Checkup</td>
                                         <td>1:00 hour</td>
-                                        <td><button type="button" class="btn btn-primary btn-sm">Select</button></td>
+                                        <td><button type="button" class="btn btn-primary btn-sm service-btn">Select</button></td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
                                         <td>Teath cleaning</td>
                                         <td>35 min</td>
-                                        <td><button type="button" class="btn btn-primary btn-sm">Select</button></td>
+                                        <td><button type="button" class="btn btn-primary btn-sm service-btn">Select</button></td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
                                         <td>Teath removal</td>
                                         <td>35 min</td>
-                                        <td><button type="button " class="btn btn-primary btn-sm">Select</button></td>
+                                        <td><button type="button " class="btn btn-primary btn-sm service-btn">Select</button></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -231,7 +231,7 @@
 
         <div id="setting-view" view="no-show" class="container">
             <div class="container">
-                <h3> Log in to manage the back end</h3>
+                <h3> Log in change the program settings</h3>
                 <form>
                     <div class="form-group">
                         <label for="email">Email address:</label>
@@ -260,7 +260,6 @@
             <div class="container">
 
             </div>
-
         </div>
     </div>
 

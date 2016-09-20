@@ -52,7 +52,26 @@ $(document).ready(function (e) {
 	});
 
 	$('#login').click(function (e) {
-		$('#login-view .container').append("<p>Log in screen will go here</p>");
+		e.preventDefault();
+		var viewName = $(this).attr('launch-view');
+		showView(viewName);
+		$('#login-view .container').html(
+			'<h3> Log in to set up your services and time</h3>'+
+			'<form>'+
+			'<div class="form-group">'+
+			'<label for="email">Email address:</label>'+
+			'<input type="email" class="form-control" id="email">'+
+			'</div>'+
+			'<div class="form-group">'+
+			'<label for="pwd">Password:</label>'+
+			'<input type="password" class="form-control" id="pwd">'+
+			'</div>'+
+			'<div class="checkbox">'+
+			'<label><input type="checkbox"> Remember me</label>'+
+			'</div>'+
+			'<button type="submit" class="btn btn-default">Submit</button>'+
+			'</form>');
+		history.pushState(null, null, 'booking.html#login');
 	});
 
 	$('#li-doctor').click(function (e) {
@@ -84,7 +103,9 @@ $(document).ready(function (e) {
 		history.pushState(null, null, 'booking.html#setting');
 	});
 
-
+	$('.service-btn').click(function (e) {
+		$('#date-time-btn').removeClass("disabled");
+	});
 
 
 });
