@@ -103,6 +103,8 @@ $(document).ready(function (e) {
 		history.pushState(null, null, 'booking.html#setting');
 	});
 
+	//if a service is picked, then the DateTime button is enable
+	// for client to move to next step
 	$('.service-btn').click(function (e) {
 		$('#date-time-btn').removeClass("disabled");
 	});
