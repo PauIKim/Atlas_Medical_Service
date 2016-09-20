@@ -10,8 +10,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- end Bootstrap setting #####  -->
-    <link rel="stylesheet" href="kstyle.css">
-    <script src="bookingservice.js"></script>
+    <link rel="stylesheet" href="resources/kstyle.css">
+    <script src="resources/booking.js"></script>
 
 </head>
 <body>
@@ -23,10 +23,10 @@
                     <a class="navbar-brand" href="#">Atlas Medical Service</a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li class=""><a href="#">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Doctors/Physicians</a></li>
-                    <li class ="active"><a href="#">Booking</a></li>
+                    <li class="active"><a id="li-home" launch-view="home-view" href="#">Home</a></li>
+                    <li><a id="li-service" launch-view="service-view" href="#">Services</a></li>
+                    <li><a id="li-doctor" launch-view="doctor-view" href="#">Doctors/Physicians</a></li>
+                    <li class =""><a id="li-booking" launch-view="booking-view" href="#">Booking</a></li>
                     <li><a href="#">Reviews</a></li>
                     <li><a href="#" >Settings</a></li>
                 </ul>
@@ -34,7 +34,7 @@
         </nav>
     </div>
 
-    <div id="booking">
+    <div id="booking-view"  view ="no-show">
         <h2 class="text-center">Make Appointment</h2>
 
         <div class="container text-center">
@@ -44,6 +44,74 @@
         </div>
         <div id="booking-service" class="container show">
             booking service list for picking page
+            List all services here
+            <div class="row">
+                <div class="col-sm-6 service-grid">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Service</th>
+                                <th>Duration</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Normal Checkup</td>
+                                <td>1:00 hour</td>
+                                <td><button type="button" class="btn btn-primary btn-sm">Select</button></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Teath cleaning</td>
+                                <td>35 min</td>
+                                <td><button type="button" class="btn btn-primary btn-sm">Select</button></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Teath removal</td>
+                                <td>35 min</td>
+                                <td><button type="button " class="btn btn-primary btn-sm">Select</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-sm-6 service-grid">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Service</th>
+                            <th>Duration</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Normal Checkup</td>
+                            <td>1:00 hour</td>
+                            <td><button type="button" class="btn btn-primary btn-sm">Select</button></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Teath cleaning</td>
+                            <td>35 min</td>
+                            <td><button type="button" class="btn btn-primary btn-sm">Select</button></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Teath removal</td>
+                            <td>25 min</td>
+                            <td><button type="button" class="btn btn-primary btn-sm">Select</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
         </div>
 
         <div id="booking-confirm" class="container show">
@@ -52,8 +120,14 @@
 
     </div>
 
-    <div id="doctors" class="container show">
-        <div id="profile-form">
+    <div id="service-view" view = "no-show">
+        <div class = "container">
+            <h3>This is the view of service page </h3>
+        </div>
+    </div>
+    <!-- List our doctors ######## -->
+    <div id="doctor-view"  view="no-show">
+        <div id="profile-form" class="container">
             <h2>Doctor/Physician Information:</h2>
             <h2>Kien T. Nguyen </h2>
             <div class = "profile-info">
@@ -144,17 +218,40 @@
             </table>
         </div>
     </div>
+    <!-- end of list our doctors ######## -->
 
+    <div id="settings" view="no-show">
+        <div class = "container">
+            <h3> Log in to manage the back end</h3>
+            <form>
+                <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd">
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox"> Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+    </div>
 
-
-
+    <div id="home-view" view="show">
+        <div class = "container">
+            <h3>This is the view of home page</h3>
+        </div>
+    </div>
 
     <div id="footer" class="container">
         <div class="panel-footer">
             <p>Email: me@gmail.com</p>
             </p>Address: 2323 East Main St. Charlotevill, VA 20949</p>
         </div>
-    </div>
+    </div>  <!-- footer -->
 
 
 
