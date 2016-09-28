@@ -1,0 +1,28 @@
+{
+  "name": "swe432_doctor_appointment",
+  "version": "1.0.0",
+  "description": "Step 1:",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/traviskampa/swe432_doctor_appointment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/traviskampa/swe432_doctor_appointment/issues"
+  },
+  "homepage": "https://github.com/traviskampa/swe432_doctor_appointment#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "email-verify": "^0.1.0",
+    "express": "^4.14.0",
+    "jquery": "^3.1.1",
+    "jsdom": "^9.5.0",
+    "nodemon": "^1.10.2"
+  }
+}
