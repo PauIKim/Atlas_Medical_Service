@@ -1,54 +1,32 @@
 # swe432_doctor_appointment
 
-Collaborators: Kien Nguyen, Pyoung Kang Kim
+#IMPORTANT:
 
-Project Description
+For this project, I am running it by going into the directory and typing "node server.js". It connects to a Web Service(my Nodejs service). 
+booking.html has the server scripts, along with server.js.
 
-     This project will create a web application that allow clients to make an
-     appointment for a medical service with a group of doctors and for
-     doctors to keep track of their daily schedule.
 
-  Clients
+Step 1:
 
-     [1] To make an appointment, a client will select a date and the type of
-     health issue, then pick the name of the physician/doctor he/she wants.
-     The program will diplay a list of services that the doctor/physician
-     provides, along with the cost and the time available for the client's
-     selected date.
+Four Baseline Scenarios
 
-     [2] The client picks the service he needs, then uses his/her phone or
-     email to confirm his decision. The web program will send the
-     confirmation to the client's email or through a text message.
+[1] Registration (Completed)
 
-     [3] The client can search their appointments page to check their
-     appointment. The web program will email or text the client a reminder
-     when the appointment is a day away.
+A patient using the website may register using a unique email and some password.
+He/She must use this registered information across the website to request appointments.
 
-     [4] The client can later log into their account and CANCEL or MOVE their
-     appointment schedule.
+[2] Appointment Request
 
-  Doctor/Physicians.
+A patient for the website can request an appointment for a certain time of the day. He must enter in his email and password and he cannot request an appointment on a time is already taken. 
 
-     [1] Doctors can log in to check their schedule. After logging in, the
-     doctor can either VIEW their schedule on particular date, or CANCEL or
-     request to MOVE a client's appointment. In case of moving, client will
-     receive a notification and need to confirm with the new schedule so it
-     can be effective.
+[3] Email Verification (Completed)
 
-     [2] Doctors can also ADD/REMOVE/UPDATE any other schedule (that they
-     received outside the program) manually.
+A Web Service running from Nodejs on my computer, which has installed a module called email-verify will be used to check if an email is actually valid upon signing up for an account.
 
-     [3] Doctors can also turn on/off their reminder function.
+[4] Calendar
 
-Project requirements
+Users can see a calendar of times that are available for an appointment so they don't need to try and see if a time area they chose is valid. This will be created using D3.js
 
-     This project will use D3js to add some visual effects on presenting a
-     calendar and list of schedule for clients and doctors. It will also use
-     either a Texting API such as "Textingly", or an email Validation API
-     such as "Email Hippo Email Validation" to verify/remind the client for
-     their appointment. The webapp also will use a database on the server
-     side to store important schemas and to render appropriate information
-     such as the doctor information or new appointments onto the client side.
 
 Git Repository URL
 	https://github.com/traviskampa/swe432_doctor_appointment.git

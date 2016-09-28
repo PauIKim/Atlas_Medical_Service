@@ -1,0 +1,110 @@
+<!-- This html file acts as the index of the website and handles all the main html workload by injecting other js/html files-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking Appoinment</title>
+    <!-- this setting for Bootstrap ########### -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- end Bootstrap setting #####  -->
+    <link rel="stylesheet" href="kstyle.css">
+    <script src="booking.js"></script>
+   <script> 
+    $(function(){
+      $("#includedContent").load("home.html");
+      $("#footerView").load("footer.html");
+    });
+    </script> 
+</head>
+<body>
+    <!--modularized html to js files-->
+    <script src="navbar.js"></script>
+    <script src="appointment.js"></script>
+    <script src="service.js"></script>
+    <script src="doctor.js"></script>
+    <script src="review.js"></script>
+
+    <div id="home-view"  view="show" >
+        <div class="container">
+	    	<div id="includedContent"></div>
+        </div>
+     </div>
+
+    <div id="login-view" view="no-show">
+         <div class="container"></div>
+    </div>
+
+    <script src="register.js"></script>
+	<div id="footerView"></div>
+
+    <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAWxwRaLPoQHNhWlL0BNEhAAiw5ejKR9Po",
+            authDomain: "swe432-ce0a7.firebaseapp.com",
+            databaseURL: "https://swe432-ce0a7.firebaseio.com",
+            storageBucket: "swe432-ce0a7.appspot.com",
+            messagingSenderId: "245504141818"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+    <script>
+        // The code within this script tags are inspired by Firebase Web Quickstart video and live demos from Piazza
+        var currentMessage = document.getElementById("currentMessage"),
+                txtNewMessage = document.getElementById("txtNewMessage"),
+                btUpdateMessage = document.getElementById("btUpdateMessage"),
+                rootRef = new Firebase("https://swe432-ce0a7.firebaseio.com/"),
+                reviews = rootRef.child("themReviews"),
+                latestReview = rootRef.child("latestReview"),
+                allReviews = document.getElementById("allReviews"),
+                users = rootRef.child("users");
+
+        var today = new Date();
+
+        function addReview(value, key){
+            console.log(today.toDateString());
+            $("#allReviews").append(
+
+                    '<li class="list-group-item">' + value + '<br>-' + today.toDateString() +
+                    '</li>'
+            );
+        }
+
+        reviews.on("child_added", function (data){
+            addReview(data.val().review, data.key);
+        });
+        //when submit review button is clicked, push the review to firebase
+        btUpdateMessage.addEventListener("click", function (){
+            reviews.push({"review" : txtNewMessage.value})
+            latestReview.set({"currentMessage" : txtNewMessage.value})
+            txtNewMessage.value = "";
+        });
+        //keep the latest review in the jumbotron
+        latestReview.on("value", function(snapshot){
+            currentMessage.innerText = snapshot.val().currentMessage + '\n -' + today.toDateString();
+        });
+
+    </script>
+
+    <script>
+        //when the #verify button is clicked, it will send an ajax post request, the #emailFormInput value
+        "use strict";
+        $("#verify").click(function(){
+            var email = $("#emailFormInput");
+            var password = $("#pwd");
+            $.post("http://localhost:4000/verify", {email : email.val()}).done(function(data){
+                //if the verifier says that the email is valid, then we add it to our remote database(firebase)
+                if(data.isValid){
+                    users.push({user : "{id: " +  email.val() +"}" + " " + "{pass: " + password.val()+"}"});
+                }
+            })
+        });
+    </script>
+
+</body>
+</html>
