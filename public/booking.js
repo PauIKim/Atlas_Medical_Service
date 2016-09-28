@@ -1,9 +1,7 @@
 var curView ='home-view';
 
 $(document).ready(function (e) {
-	console.log("DAFUA11");console.log("DAFUA11");console.log("DAFUA11");
 	function showView(viewName) {
-		console.log("DAFUA11");
 		//console.log(curView+'.'+viewName);
 		$('#'+curView).hide();
 		//$('.'+curView).attr('view','no-view');
@@ -36,8 +34,7 @@ $(document).ready(function (e) {
 
 	// add click event for Service nav-link
 	$('#li-service').click(function (e) {
-		console.log("DAFUA");
-		e.preventDefault();
+	    e.preventDefault();
 		var viewName = $(this).attr('launch-view');
 		showView(viewName);
 		$('#service-view .container').append("<p>" +
@@ -107,7 +104,7 @@ $(document).ready(function (e) {
 		e.preventDefault();
 		var viewName = $(this).attr('launch-view');
 		showView(viewName);
-		history.pushState(null, null, 'booking.html#setting');
+		history.pushState(null, null, 'booking.html#register');
 	});
 
 	//if a service is picked, then the DateTime button is enable

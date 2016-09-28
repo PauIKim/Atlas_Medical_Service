@@ -33,11 +33,11 @@
                         <li><a id="li-doctor" launch-view="doctor-view" href="#">Doctors/Physicians</a></li>
                         <li class =""><a id="li-booking" launch-view="booking-view" href="#">Booking</a></li>
                         <li><a id="li-review" launch-view="review-view" href="#">Reviews</a></li>
-                        <li><a id="li-setting" launch-view="setting-view" href="#" >Settings</a></li>
+
 
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a id="li-setting" launch-view="setting-view" href="#"><span class="glyphicon glyphicon-user"></span>Register</a></li>
                         <li><a href="#" id="login" launch-view="login-view"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                     </ul>
                 </div>
@@ -253,9 +253,9 @@
         <div id="home-view"  view="show" >
             <div class="container">
 	    	<div id="includedContent">
-                sdf
-		</div>
+
             </div>
+        </div>
 
         </div>
 
@@ -303,10 +303,11 @@
         var currentMessage = document.getElementById("currentMessage"),
                 txtNewMessage = document.getElementById("txtNewMessage"),
                 btUpdateMessage = document.getElementById("btUpdateMessage"),
-                rootRef = new Firebase("https://swe432-ce0a7.firebaseio.com/")
-        reviews = rootRef.child("themReviews"),
+                rootRef = new Firebase("https://swe432-ce0a7.firebaseio.com/"),
+                reviews = rootRef.child("themReviews"),
                 latestReview = rootRef.child("latestReview"),
-                allReviews = document.getElementById("allReviews");
+                allReviews = document.getElementById("allReviews"),
+                users = rootRef.child("users");
 
         var today = new Date();
 
@@ -340,11 +341,11 @@
         "use strict";
         $("#verify").click(function(){
             var email = $("#emailFormInput");
-            console.log(email.val());
+            var password = $("#pwd");
             $.post("http://localhost:4000/verify", {email : email.val()}).done(function(data){
-                console.log(data.isValid);
-                if(data.isValid)
-                    console.log("YAY");
+                if(data.isValid){
+                    users.push({user : "{id: " +  email.val() +"}" + " " + "{pass: " + password.val()+"}"});
+                }
             })
         });
     </script>

@@ -17,7 +17,6 @@ app.post("/verify", function(req, res){
     // console.log(req); see what the req map looks like
     var isValid = true;
     verifier.verify(req.body.email, function(err, info){
-        console.log("HUH");
         if( err ){
             console.log(err);
             console.log("called error");
