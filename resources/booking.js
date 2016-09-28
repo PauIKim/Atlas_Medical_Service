@@ -1,6 +1,3 @@
-/**
- * Created by Kien
- */
 var curView ='home-view';
 
 $(document).ready(function (e) {
@@ -86,6 +83,14 @@ $(document).ready(function (e) {
 		var viewName = $(this).attr('launch-view');
 		showView(viewName);
 		history.pushState(null, null, 'booking.html#booking');
+	});
+
+	$('#li-review').click(function (e){
+		e.preventDefault();
+		var viewName = $(this).attr('launch-view');
+		showView(viewName);
+
+		history.pushState(null, null, 'booking.html#reviews');
 	});
 
 	$('#li-home').click(function (e) {

@@ -12,7 +12,11 @@
     <!-- end Bootstrap setting #####  -->
     <link rel="stylesheet" href="resources/kstyle.css">
     <script src="resources/booking.js"></script>
-
+   <script> 
+    $(function(){
+      $("#includedContent").load("templates/home.html");
+    });
+    </script> 
 </head>
 <body>
     <!-- class="container" in order to center the div -->
@@ -28,7 +32,7 @@
                         <li><a id="li-service" launch-view="service-view" href="#">Services</a></li>
                         <li><a id="li-doctor" launch-view="doctor-view" href="#">Doctors/Physicians</a></li>
                         <li class =""><a id="li-booking" launch-view="booking-view" href="#">Booking</a></li>
-                        <li><a href="#review">Reviews</a></li>
+                        <li><a id="li-review" launch-view="review-view" href="#">Reviews</a></li>
                         <li><a id="li-setting" launch-view="setting-view" href="#" >Settings</a></li>
 
                     </ul>
@@ -249,9 +253,28 @@
             </div>
         </div>
 
+        <div id="review-view" view="no-show" class="container">
+            <div class="container">
+            <h3 class="text-center">Reviews</h3>
+            <div class="jumbotron">
+                <h3 id="currentMessage" class="text-center"></h3>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="txtNewMessage" class="form-control">
+                <button id="btUpdateMessage" class="btn btn-primary">Submit Review!</button>
+            </div>
+            <ul class="list-group" id="allReviews">
+
+            </ul>
+             </div>
+        </div>
+
         <div id="home-view"  view="show" >
             <div class="container">
-                <h3>This is the view of home page</h3>
+	    	<div id="includedContent">
+                sdf
+		</div>
             </div>
 
         </div>
@@ -263,13 +286,57 @@
         </div>
     </div>
 
-    <div id="footer" class="container">
-        <div class="panel-footer">
-            <p>Email: me@gmail.com</p>
-            </p>Address: 2323 East Main St. Charlotevill, VA 20949</p>
-        </div>
-    </div>  <!-- footer -->
+	<br /> <br />
+	<footer>© 2016-2016 AtlasMedicalService. Medicine and Health
+		Research Foundation. All Rights reserved.</footer>
+    <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAWxwRaLPoQHNhWlL0BNEhAAiw5ejKR9Po",
+            authDomain: "swe432-ce0a7.firebaseapp.com",
+            databaseURL: "https://swe432-ce0a7.firebaseio.com",
+            storageBucket: "swe432-ce0a7.appspot.com",
+            messagingSenderId: "245504141818"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+    <script>
+        var currentMessage = document.getElementById("currentMessage"),
+                txtNewMessage = document.getElementById("txtNewMessage"),
+                btUpdateMessage = document.getElementById("btUpdateMessage"),
+                rootRef = new Firebase("https://swe432-ce0a7.firebaseio.com/")
+        reviews = rootRef.child("themReviews"),
+                latestReview = rootRef.child("latestReview"),
+                allReviews = document.getElementById("allReviews");
 
+        var today = new Date();
+
+        function addReview(value, key){
+            console.log(today.toDateString());
+            $("#allReviews").append(
+
+                    '<li class="list-group-item">' + value + '<br>-' + today.toDateString() +
+                    '</li>'
+            );
+        }
+
+        reviews.on("child_added", function (data){
+            addReview(data.val().review, data.key);
+        });
+
+        btUpdateMessage.addEventListener("click", function (){
+            reviews.push({"review" : txtNewMessage.value})
+            latestReview.set({"currentMessage" : txtNewMessage.value})
+            txtNewMessage.value = "";
+        });
+
+        latestReview.on("value", function(snapshot){
+            currentMessage.innerText = snapshot.val().currentMessage + '\n -' + today.toDateString();
+        });
+
+    </script>
 
 </body>
 </html>
