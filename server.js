@@ -1,7 +1,3 @@
-/**
- * Created by rusty on 9/28/16.
- */
-
 var express = require("express");
 var bodyParser = require("body-parser");
 var app = express();
@@ -11,11 +7,12 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 app.use(express.static("public"));
 
-
+// this uses the module called email-verify to validate true email through SMTP checking
 app.post("/verify", function(req, res){
-    // console.log(req.toString()); see the full toString of the map object
-    // console.log(req); see what the req map looks like
+    //set a flag
     var isValid = true;
+
+    //if the email isn't valid, isValid will be false
     verifier.verify(req.body.email, function(err, info){
         if( err ){
             console.log(err);
