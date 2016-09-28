@@ -1,5 +1,11 @@
 # swe432_doctor_appointment
 
+#IMPORTANT:
+
+For this project, I am running it by going into the directory and typing "node server.js". It connects to a Web Service(my Nodejs service). 
+booking.html has the server scripts, along with server.js.
+
+
 Step 1:
 
 Four Baseline Scenarios
