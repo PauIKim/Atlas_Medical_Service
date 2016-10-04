@@ -4,7 +4,7 @@ var Appointments = React.createClass({
     render: function() {
         return (
             <div>
-                <h2>Appointments Page</h2>
+                <h1>Appointments Page</h1>
             </div>
         );
     }
