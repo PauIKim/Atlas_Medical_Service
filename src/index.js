@@ -71,3 +71,16 @@ btUpdateMessage.addEventListener("click", function (){
 latestReview.on("value", function(snapshot){
     currentMessage.innerText = snapshot.val().currentMessage + '\n -' + today.toDateString();
 });
+console.log("REFRESHED");
+
+//when the #verify button is clicked, it will send an ajax post request, the #emailFormInput value
+$("#verify").click(function(){
+    var email = $("#emailFormInput");
+    var password = $("#pwd");
+    $.post("http://localhost:4000/verify", {email : email.val()}).done(function(data){
+        //if the verifier says that the email is valid, then we add it to our remote database(firebase)
+        if(data.isValid){
+            users.push({user : "{id: " +  email.val() +"}" + " " + "{pass: " + password.val()+"}"});
+        }
+    })
+});
