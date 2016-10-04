@@ -1,4 +1,6 @@
 import React from 'react';
+import $ from 'jquery';
+
 
 var Reviews = React.createClass({
     render: function() {
@@ -24,3 +26,4 @@ var Reviews = React.createClass({
 });
 
 export default Reviews;
+

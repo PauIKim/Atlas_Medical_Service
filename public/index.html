@@ -11,9 +11,27 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
   <title>Atlas Medical Service</title>
 </head>
 <body>
 <div id="root"></div>
+
+
+<script>
+  //when the #verify button is clicked, it will send an ajax post request, the #emailFormInput value
+  "use strict";
+  $("#verify").click(function(){
+    var email = $("#emailFormInput");
+    var password = $("#pwd");
+    $.post("http://localhost:4000/verify", {email : email.val()}).done(function(data){
+      //if the verifier says that the email is valid, then we add it to our remote database(firebase)
+      if(data.isValid){
+        users.push({user : "{id: " +  email.val() +"}" + " " + "{pass: " + password.val()+"}"});
+      }
+    })
+  });
+</script>
+
 </body>
 </html>
