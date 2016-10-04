@@ -7,11 +7,11 @@ import Reviews from './Reviews';
 import Appointments from './Appointments';
 import Register from './Register';
 
-
 import './kstyle.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'jquery/dist/jquery.min.js';
 import 'bootstrap/dist/js/bootstrap.min.js';
+import './home-stylesheet.css';
 
 var destination = document.querySelector("#root");
 

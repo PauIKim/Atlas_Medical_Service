@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import Home from './Home';
+import React from 'react';
 import { Link, IndexLink }from 'react-router';
 
 var App = React.createClass({
