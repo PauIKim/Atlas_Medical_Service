@@ -16,5 +16,96 @@
 </head>
 <body>
 <div id="root"></div>
+<!--
+<script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+<script type="text/babel">
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAWxwRaLPoQHNhWlL0BNEhAAiw5ejKR9Po",
+    authDomain: "swe432-ce0a7.firebaseapp.com",
+    databaseURL: "https://swe432-ce0a7.firebaseio.com",
+    storageBucket: "swe432-ce0a7.appspot.com",
+    messagingSenderId: "245504141818"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+<script type="text/babel">
+  var rootRef = firebase.database().ref();
+
+  var currentMessage = document.getElementById("currentMessage"),
+          txtNewMessage = document.getElementById("txtNewMessage"),
+          btUpdateMessage = document.getElementById("btUpdateMessage"),
+          reviews = rootRef.child("themReviews"),
+          latestReview = rootRef.child("latestReview"),
+          allReviews = document.getElementById("allReviews"),
+          users = rootRef.child("users");
+
+  var today = new Date();
+
+  function addReview(value, key){
+    console.log(today.toDateString());
+    $("#allReviews").append(
+
+            '<li class="list-group-item">' + value + '<br>-' + today.toDateString() +
+            '</li>'
+    );
+  }
+
+  reviews.on("child_added", function (data){
+    addReview(data.val().review, data.key);
+  });
+  //when submit review button is clicked, push the review to firebase
+  btUpdateMessage.addEventListener("click", function (){
+    reviews.push({"review" : txtNewMessage.value})
+    latestReview.set({"currentMessage" : txtNewMessage.value})
+    txtNewMessage.value = "";
+  });
+  //keep the latest review in the jumbotron
+  latestReview.on("value", function(snapshot){
+    currentMessage.innerText = snapshot.val().currentMessage + '\n -' + today.toDateString();
+  });
+  //when the #verify button is clicked, it will send an ajax post request, the #emailFormInput value
+  $("#verify").click(function(){
+    var email = $("#emailFormInput");
+    var password = $("#pwd");
+    $.post("http://localhost:4000/verify", {email : email.val()}).done(function(data){
+      //if the verifier says that the email is valid, then we add it to our remote database(firebase)
+      if(data.isValid){
+        users.push({user : "{id: " +  email.val() +"}" + " " + "{pass: " + password.val()+"}"});
+      }
+    })
+  });
+
+  console.log("REFRESHED");
+  var express = require("express");
+  var bodyParser = require("body-parser");
+  var app = express();
+  var verifier = require("email-verify");
+
+  app.use(bodyParser.urlencoded({extended:true}));
+
+  app.use(express.static("public"));
+
+  app.post("/verify", function(req, res){
+    // console.log(req.toString()); see the full toString of the map object
+    // console.log(req); see what the req map looks like
+    var isValid = true;
+    verifier.verify(req.body.email, function(err, info){
+      if( err ){
+        console.log(err);
+        console.log("called error");
+        isValid = false;
+      }
+      else {
+        isValid = false;
+        console.log("Successes (T/F): " + info.success);
+        console.log("Info: " + info.info);
+      }
+    });
+    res.json({isValid: isValid});
+  });
+
+</script>-->
 </body>
 </html>

@@ -1,7 +1,48 @@
 import React from 'react';
 import { Link, IndexLink }from 'react-router';
+import $ from 'jquery';
+var firebase = require('firebase');
 
 var App = React.createClass({
+    getReviews: function() {
+        $(document).ready(function() {
+            var rootRef = firebase.database().ref();
+
+            var currentMessage = document.getElementById("currentMessage"),
+                txtNewMessage = document.getElementById("txtNewMessage"),
+                btUpdateMessage = document.getElementById("btUpdateMessage"),
+                reviews = rootRef.child("themReviews"),
+                latestReview = rootRef.child("latestReview"),
+                allReviews = document.getElementById("allReviews"),
+                users = rootRef.child("users");
+
+            var today = new Date();
+
+            function addReview(value, key){
+                console.log(today.toDateString());
+                $("#allReviews").append(
+
+                    '<li class="list-group-item">' + value + '<br>-' + today.toDateString() +
+                    '</li>'
+                );
+            }
+
+            reviews.on("child_added", function (data){
+                addReview(data.val().review, data.key);
+            });
+//when submit review button is clicked, push the review to firebase
+            btUpdateMessage.addEventListener("click", function (){
+                reviews.push({"review" : txtNewMessage.value})
+                latestReview.set({"currentMessage" : txtNewMessage.value})
+                txtNewMessage.value = "";
+            });
+//keep the latest review in the jumbotron
+            latestReview.on("value", function(snapshot){
+                currentMessage.innerText = snapshot.val().currentMessage + '\n -' + today.toDateString();
+            });
+        });
+
+    },
     render: function() {
         return (
         <div id="header" className="container">
@@ -14,7 +55,7 @@ var App = React.createClass({
                         <ul className="nav navbar-nav">
                                 <li><IndexLink to="/" activeClassName="active">Home</IndexLink></li>
                                 <li><Link to="/appointments" activeClassName="active">Appointments</Link></li>
-                                <li><Link to="/reviews" activeClassName="active">Reviews</Link></li>
+                                <li><Link to="/reviews" activeClassName="active" onClick={this.getReviews}>Reviews</Link></li>
                         </ul>
                         <ul className="nav navbar-nav navbar-right">
                             <li><Link to="/register" activeClassName="active"><span className="glyphicon glyphicon-user"></span>Register</Link></li>
