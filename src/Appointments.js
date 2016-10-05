@@ -34,12 +34,17 @@ var Appointments = React.createClass({
 
             var email = document.getElementById("emailId"),
                 appointments = rootRef.child("appointments"),
-                time = document.getElementById("time");
-            var scheduleTime = time.value;
-            console.log(scheduleTime);
-            console.log("HMM");
-            appointments.push({"time" :  scheduleTime});
-            alert("You have been scheduled for " + scheduleTime);
+                time = document.getElementById("time"),
+                password = document.getElementById("passId");
+            if (email.value === "" || password.value === "" || time.value === ""){
+                alert("You must enter a correct email and password and time")
+            } else {
+                var scheduleTime = time.value;
+                console.log(scheduleTime);
+                console.log("HMM");
+                appointments.push({"time": scheduleTime});
+                alert("You have been scheduled for " + scheduleTime);
+            }
         });
     },
     render: function() {
@@ -48,9 +53,9 @@ var Appointments = React.createClass({
                    <div id="appointment-form">
                         <form>
                             <p id="validation"> Important : You must be registered to set an appointment </p>
-                            <br /> E-mail: &nbsp; &nbsp; &nbsp; <input type="email" pattern="*@*.*"
-                                                        name="email" placeholder="example@example.com" /> <br />
-                            Password: <input type="password" /> <br />
+                            <br /> E-mail: &nbsp; &nbsp; &nbsp; <input type="email" pattern="*@*.*" id="emailId" name="email" placeholder="example@example.com" /> <br />
+                            Password:
+                            <input type="password" id="passId" /> <br />
                             <br />
                             <h3>Appointment Time</h3>
                             <input type="datetime-local" id="time"/>
