@@ -26,6 +26,7 @@ var config = {
 };
 firebase.initializeApp(config);
 
+
 ReactDOM.render(
     <ReactRouter.Router>
         <ReactRouter.Route path="/" component={App}>

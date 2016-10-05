@@ -2,7 +2,8 @@ import React from 'react';
 import { Link, IndexLink }from 'react-router';
 import $ from 'jquery';
 var firebase = require('firebase');
-
+import "./kstyle.css";
+//import Firebase from 'firebase';
 var App = React.createClass({
     getReviews: function() {
         $(document).ready(function() {
@@ -22,7 +23,7 @@ var App = React.createClass({
                 console.log(today.toDateString());
                 $("#allReviews").append(
 
-                    '<li class="list-group-item">' + value + '<br>-' + today.toDateString() +
+                    '<li class="list-group-item">' + value + '<br>-' +
                     '</li>'
                 );
             }
@@ -44,9 +45,9 @@ var App = React.createClass({
 
     },
     register: function() {
-        $(document.ready(function(){
+        $(document).ready(function(){
 
-        }));
+        });
     },
     render: function() {
         return (
@@ -59,11 +60,11 @@ var App = React.createClass({
                     <div className="collapse navbar-collapse" id="myNavbar">
                         <ul className="nav navbar-nav">
                                 <li><IndexLink to="/" activeClassName="active">Home</IndexLink></li>
-                                <li><Link to="/appointments" activeClassName="active">Appointments</Link></li>
+                                <li><Link to="/appointments" activeClassName="active" onClick={this.booking}>Appointments</Link></li>
                                 <li><Link to="/reviews" activeClassName="active" onClick={this.getReviews}>Reviews</Link></li>
                         </ul>
                         <ul className="nav navbar-nav navbar-right">
-                            <li><Link to="/register" activeClassName="active" onClick={this.register}><span className="glyphicon glyphicon-user"></span>Register</Link></li>
+                            <li><Link to="/register" activeClassName="active"><span className="glyphicon glyphicon-user"></span>Register</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -71,6 +72,9 @@ var App = React.createClass({
             <div className="content">
                 {this.props.children}
             </div>
+            <br /> <br />
+            <footer>© 2016-2016 AtlasMedicalService. Medicine and Health
+                Research Foundation. All Rights reserved.</footer>
         </div>
         )
     }
