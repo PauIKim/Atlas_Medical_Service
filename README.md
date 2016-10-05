@@ -2,9 +2,7 @@
 
 #IMPORTANT:
 
-For this project, I am running it by going into the directory and typing "node server.js". It connects to a Web Service(my Nodejs service). 
-booking.html has the server scripts, along with server.js.
-
+To run this project on a Linux machine, cd into the root directory and simply run "npm install && npm start"
 
 Step 1:
 
