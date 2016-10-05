@@ -43,6 +43,11 @@ var App = React.createClass({
         });
 
     },
+    register: function() {
+        $(document.ready(function(){
+
+        }));
+    },
     render: function() {
         return (
         <div id="header" className="container">
@@ -58,7 +63,7 @@ var App = React.createClass({
                                 <li><Link to="/reviews" activeClassName="active" onClick={this.getReviews}>Reviews</Link></li>
                         </ul>
                         <ul className="nav navbar-nav navbar-right">
-                            <li><Link to="/register" activeClassName="active"><span className="glyphicon glyphicon-user"></span>Register</Link></li>
+                            <li><Link to="/register" activeClassName="active" onClick={this.register}><span className="glyphicon glyphicon-user"></span>Register</Link></li>
                         </ul>
                     </div>
                 </div>

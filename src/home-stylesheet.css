@@ -7,3 +7,8 @@
     border-top: 4px solid #9fd175;
     color: #252e42;
 }
+
+#validation {
+    color: red;
+    font-style: italic;
+}
