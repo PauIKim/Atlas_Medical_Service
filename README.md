@@ -15,9 +15,9 @@ Four Baseline Scenarios
 A patient using the website may register using a unique email and some password.
 He/She must use this registered information across the website to request appointments.
 
-[2] Appointment Request
+[2] Appointment Request (Completed)
 
-A patient for the website can request an appointment for a certain time of the day. He must enter in his email and password and he cannot request an appointment on a time is already taken. 
+A patient for the website can request an appointment for a certain time of the day. He must enter in his email and password and a time. 
 
 [3] Email Verification (Completed)
 

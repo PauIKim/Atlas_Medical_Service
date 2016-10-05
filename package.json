@@ -1,28 +1,37 @@
 {
-  "name": "swe432_doctor_appointment",
-  "version": "1.0.0",
-  "description": "Step 1:",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+  "name": "swe432_doctor_appointment_react",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "react-scripts": "0.6.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/traviskampa/swe432_doctor_appointment.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/traviskampa/swe432_doctor_appointment/issues"
-  },
-  "homepage": "https://github.com/traviskampa/swe432_doctor_appointment#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.7",
+    "bootstrap-loader": "^2.0.0-beta.12",
+    "css-loader": "^0.25.0",
     "email-verify": "^0.1.0",
     "express": "^4.14.0",
+    "extract-text-webpack-plugin": "^2.0.0-beta.4",
+    "file-loader": "^0.9.0",
+    "firebase": "^3.4.1",
     "jquery": "^3.1.1",
-    "jsdom": "^9.5.0",
-    "nodemon": "^1.10.2"
+    "jsdom": "^9.6.0",
+    "node-sass": "^3.10.1",
+    "nodemon": "^1.10.2",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-router": "^2.8.1",
+    "resolve-url-loader": "^1.6.0",
+    "sass-loader": "^4.0.2",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.1.0-beta.25"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }
