@@ -3,6 +3,7 @@ import './home-stylesheet.css';
 import App from './App';
 import firebase from 'firebase';
 import $ from 'jquery';
+
 var Appointments = React.createClass({
     handleSubmit : function(e) {
         e.preventDefault();
@@ -83,6 +84,7 @@ var Appointments = React.createClass({
                             <input type="submit" value="Submit" onClick={this.booking} onSubmit={this.handleSubmit} /> <input type="reset" />
                         </form>
                    </div>
+
             </div>
         );
     }
